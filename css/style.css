@@ -1,0 +1,102 @@
+
+/* shared */
+
+/* body section {
+	padding: 30px 0;
+} */
+
+/* nav */
+
+nav.navbar .collapse.navbar-collapse {
+  display: flex;      /* force flex container */
+  align-items: center;           /* vertically center items */
+  justify-content: space-between; /* push nav left, phone right */
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  nav.navbar .collapse.navbar-collapse {
+    display: flex !important;       /* force flex container */
+  }
+}
+@media (max-width: 768px) {
+  nav.navbar .collapse.navbar-collapse {
+    display: none;
+  }
+}
+
+nav.navbar .navbar-nav {
+  margin: 0;    /* remove default margin */
+}
+
+/* Bootstrap 4/5 example */
+.phone-mobile {
+  display: none;
+}
+
+.phone-desktop {
+  display: inline;
+  font-size: 14px;
+}
+
+@media (max-width: 1200) {
+  .phone-mobile {
+    display: inline;
+  font-size: 14px;
+  }
+  .phone-desktop {
+    display: none;
+  }
+}
+
+
+/* about */
+
+#about h2 {
+	margin-top: 25px;
+}
+
+/* pricing */
+
+#pricing .pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#pricing .pricing-row .oil-type {
+  font-weight: bold;
+}
+
+#pricing .pricing-row .oil-brand {
+  color: var(--muted-color);
+  font-size: 0.9em;
+}
+
+#pricing .pricing-row .price-volume,
+#pricing .pricing-row .price-weight {
+  text-align: right;
+  font-weight: 500;
+}
+
+
+#pricing-table {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#pricing-table.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* prevent interactions while hidden */
+}
+
+/* certificates */
+
+#certificates .grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}

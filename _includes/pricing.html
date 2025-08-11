@@ -1,0 +1,23 @@
+<section 
+  id="pricing" 
+  class="container" 
+  data-sheet-url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnPV97PYF-hErXqrH9v2tl3xrgHfpoWlYgx0KIK8wiSk5QHwiHffdStwgtX1G6g-8w35VC35th869S/pub?gid=0&single=true&output=csv"
+>
+  <header style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5em;">
+    <h2 style="margin: 0;">Актуальные цены</h2>
+    <button 
+      onclick="fetchPricing()" 
+      id="priceUpdater" 
+      class="secondary"
+      style="margin: 0;"
+    >
+      🔄 Обновить
+    </button>
+  </header>
+
+  <p id="pricing-update-ts" style="margin-top: 0.5em; font-size: 0.9em; color: gray;">
+    Обновление не загружено
+  </p>
+
+  <div id="pricing-table" class="grid">Загрузка...</div>
+</section>

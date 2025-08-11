@@ -1,71 +1,118 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://jeromelachaud.com/freelancer-theme
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+title: solaris-snab.ru
+email:  snab@solaris-snab.ru
+url: solaris-snab.ru
+description: "Descriptions"
+keywords: "Keywords"
+# skills: "Web Developer - Graphic Artist - User Experience Designer"
+# meta_author: LastName FirstName
 
+phone: +7 900 123-45-67
+phoneLink: tel:+79001234567
+
+########
+########
+########
 # Google webmaster tools
 google_verify:
 
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
+## yandex_verify: your-yandex-webmaster-code
+
+# Analytics / ads IDs
+## yandex_metrika_id: "12345678"   # Your Metrika counter ID
+## yandex_ads_id: "R-A-123456-7"   # Optional: Yandex Ads ID
+########
+########
+########
+
+
 # Contact form:
+# - yandex : pass through yandex forms
 # - static : pass through formspree.io to validate email sending
 # - disqus : replace contact form by disqus thread
 # - comment the line below if you want to stick with the default PHP contact form
 contact: static
 
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: myshortname
+blocks:
+  head: true
+  nav: true
+  header: false
+  about: true
+  pricing: true
+  # yandex_form: false # cause of contact: yandex
+  yandex_form: true
+  certificates: true
+  portfolio_grid: false
+  contact: false
+  footer: true
+  modals: true
+  js: true
+
+# # If you use disqus you need disqus shortname
+# # https://help.disqus.com/customer/portal/articles/466208
+# disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  # primary: 18bc9c #80B3FF
+  # primary-rgb: "24,288,156" #"128,179,255"
+  # secondary: 2c3e50 #FD6E8A
+  # secondary-dark: 233140 #A2122F
+  ####
+  # primary: d4a017        # Golden oil tone
+  # primary-rgb: "212,160,23"
+  # secondary: 2c3e50      # Charcoal blue
+  # secondary-dark: 1f2a36 # Deep steel
+  ####
+  primary: 16a085        # Slightly darker teal
+  primary-rgb: "22,160,133"
+  secondary: 3b2f2f      # Dark oil brown
+  secondary-dark: 2a1f1f # Almost black brown
+
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+  copyright: solaris-snab.ru
+  location: Kirov
+  social: solaris-snab.ru
+  # credits: Credits
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
+# # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# social:
+#   - title: twitter
+#     url: http://twitter.com/jekyllrb
+#   - title: facebook
+#     url:
+#   - title: stack-overflow
+#     url: http://stackoverflow.com/questions/tagged/jekyll
+#   - title: bitbucket
+#     url: http://bitbucket.org/jekyll
+#   - title: github
+#     url: http://github.com/jekyll
 
-# Postal address (add as many lines as necessary)
+# Postal address (add as many lines as necessary) 
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Kirov
+  - line: somewhere
 
-# Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+# # Credits content
+# credits: 'credits for solaris-snab.ru'
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 
-#for posts
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      permalink: ""
+collections:
+  certificates:
+    output: false
+
+# #for posts
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       permalink: ""

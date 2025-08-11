@@ -1,0 +1,14 @@
+<section id="certificates" class="container">
+  <h2>Сертификаты</h2>
+  <p>Мы предоставляем паспорта качества и сертификаты от НПЗ</p>
+
+  <div class="grid">
+    {% for cert in site.certificates %}
+      <article class="card">
+        <img src="{{ cert.thumb }}" alt="{{ cert.title }}">
+        <h3>{{ cert.title }}</h3>
+        <a href="{{ cert.file }}" download class="contrast button small">Скачать</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

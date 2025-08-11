@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html>
+    {% if site.blocks.head %}
     {% include head.html %}
+    {% endif %}
     <body id="page-top" class="index">
+    {% if site.blocks.nav %}
     {% include nav.html %}
-    {% include header.html %}
-    {% include portfolio_grid.html %}
-    {% include about.html %}
+    {% endif %}
 
-    {% if site.contact == "static" %}
+    {% if site.blocks.header %}
+    {% include header.html %}
+    {% endif %}
+    {% if site.blocks.about %}
+    {% include about.html %}
+    {% endif %}
+
+
+    {% if site.blocks.pricing %}
+    {% include pricing.html %}
+    {% endif %}
+    
+
+    {% if site.blocks.yandex_form %}
+    {% include yandex-form.html %}
+    {% endif %}
+    
+    {% if site.blocks.certificates %}
+    {% include certificates.html %}
+    {% endif %}
+
+    {% if site.blocks.portfolio_grid %}
+    {% include portfolio_grid.html %}
+    {% endif %}
+
+    {% if site.blocks.contact %}
+    {% if site.contact == "yandex" %}
+    {% include yandex-form.html %}
+    {% elsif site.contact == "static" %}
     {% include contact_static.html %}
     {% elsif site.contact == "disqus" %}
     {% include contact_disqus.html %}
     {% else %}
     {% include contact.html %}
     {% endif %}
+    {% endif %}
 
+    {% if site.blocks.footer %}
     {% include footer.html %}
+    {% endif %}
+
+    {% if site.blocks.modals %}
     {% include modals.html %}
+    {% endif %}
+
+    {% if site.blocks.js %}
     {% include js.html %}
+    {% endif %}
+
+    {% include tracking-scripts.html %}
     </body>
 </html>

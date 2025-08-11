@@ -455,3 +455,22 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+
+/* local updates */
+
+body section header {
+	background: transparent;
+	color: #{{ site.color.secondary }};
+}
+
+nav.navbar .phone-link {
+  margin-left: 1em;
+  font-weight: 600;
+  color: #{{ site.color.primary }};
+  text-decoration: none;
+}
+nav.navbar .phone-link:hover {
+  color: #{{ site.color.primary }};
+  text-decoration: none;
+}
