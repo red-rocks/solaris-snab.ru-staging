@@ -94,6 +94,20 @@ nav.navbar .navbar-nav {
   pointer-events: none; /* prevent interactions while hidden */
 }
 
+/* yandex forms */
+
+/* By default: show desktop, hide mobile */
+.desktop { display: block; text-align: center; }
+.mobile { display: none; text-align: center; }
+
+@media (max-width: 768px) {
+  /* On mobile: show mobile, hide desktop */
+  .desktop { display: none; }
+  .mobile { display: block; }
+}
+
+
+
 /* certificates */
 
 /* #certificates .grid {
