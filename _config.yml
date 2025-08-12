@@ -41,6 +41,7 @@ blocks:
   nav: true
   header: false
   about: true
+  reasons: true
   pricing: true
   # yandex_form: false # cause of contact: yandex
   yandex_form: true

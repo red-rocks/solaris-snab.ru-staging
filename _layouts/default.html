@@ -15,6 +15,11 @@
     {% include about.html %}
     {% endif %}
 
+    {% if site.blocks.reasons %}
+    {% include reasons.html %}
+    {% include reasons-gpt.html %}
+    {% endif %}
+
 
     {% if site.blocks.pricing %}
     {% include pricing.html %}
